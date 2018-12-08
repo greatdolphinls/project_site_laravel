@@ -6,3 +6,7 @@ Command prompt
 4. php artisan migrate
 5. php artisan db:seed
 6. php artisan serve
+
+
+if you have some problem, please contact me on S-K-P-Y-E.
+My account is kingarthurjkj19940815@outlook.com
