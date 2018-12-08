@@ -1,0 +1,8 @@
+Command prompt
+1. composer insall
+2. Create a DB
+	db_name = "project"
+3. php artisan serve
+4. php artisan migrate
+5. php artisan db:seed
+6. php artisan serve
