@@ -89,16 +89,56 @@
                                                 {{ $project->description}}
                                         </div>
                                     </div>
-                                    <div class="row static-info">
-                                            <div class="col-md-5 name">
-                                                    Attachement:
+                                        <div class="row static-info">
+                                                <div class="col-md-5 name">
+                                                        Attachement 1:
+                                                </div>
+                                                @if( $project->attachement1 != null)
+                                                <a href="/uploads/{{ $project->attachement1}}" download>Download attachement 1</a>
+                                                @else
+                                                 No upload file
+                                                @endif
                                             </div>
-                                            @if( $project->attachement != null)
-                                            <a href="/uploads/{{ $project->attachement}}" download>Download</a>
-                                            @else
-                                             No upload file
-                                            @endif
-                                        </div>
+                                            <div class="row static-info">
+                                                    <div class="col-md-5 name">
+                                                            Attachement 2:
+                                                    </div>
+                                                    @if( $project->attachement2 != null)
+                                                    <a href="/uploads/{{ $project->attachement2}}" download>Download attachement 2</a>
+                                                    @else
+                                                     No upload file
+                                                    @endif
+                                                </div>
+                                                <div class="row static-info">
+                                                        <div class="col-md-5 name">
+                                                                Attachement 3:
+                                                        </div>
+                                                        @if( $project->attachement3 != null)
+                                                        <a href="/uploads/{{ $project->attachement3}}" download>Download attachement 3</a>
+                                                        @else
+                                                         No upload file
+                                                        @endif
+                                                    </div>
+                                                    <div class="row static-info">
+                                                            <div class="col-md-5 name">
+                                                                    Attachement 4:
+                                                            </div>
+                                                            @if( $project->attachement4 != null)
+                                                            <a href="/uploads/{{ $project->attachement4}}" download>Download attachement 4</a>
+                                                            @else
+                                                             No upload file
+                                                            @endif
+                                                        </div>
+                                                        <div class="row static-info">
+                                                                <div class="col-md-5 name">
+                                                                        Attachement 5:
+                                                                </div>
+                                                                @if( $project->attachement5 != null)
+                                                                <a href="/uploads/{{ $project->attachement5}}" download>Download attachement 5</a>
+                                                                @else
+                                                                 No upload file
+                                                                @endif
+                                                            </div>
                                 </div>
                             </div>
                 </div>

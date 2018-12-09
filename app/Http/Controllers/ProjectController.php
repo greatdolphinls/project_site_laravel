@@ -37,12 +37,36 @@ class ProjectController extends Controller
         $project->fixed_price = $request->input('fixed_price');
         $project->phone = $request->input('phone');
         $project->description = $request->input('description');
-        $file = Input::file('attachement'); 
-        if($file != null){
-            $destination_path = 'uploads';
-            $attachement_name = $project->project_name.$project->client_name.'.pdf';
-            $project->attachement = $attachement_name;
-            $file->move($destination_path, $attachement_name);
+        $file1 = Input::file('attachement1'); 
+        $file2 = Input::file('attachement2'); 
+        $file3 = Input::file('attachement3'); 
+        $file4 = Input::file('attachement4'); 
+        $file5 = Input::file('attachement5'); 
+        $destination_path = 'uploads';
+        if($file1 != null){
+            $attachement_name = $project->project_name.$project->client_name.' attachment1.pdf';
+            $project->attachement1 = $attachement_name;
+            $file1->move($destination_path, $attachement_name);
+        }
+        if($file2 != null){
+            $attachement_name = $project->project_name.$project->client_name.' attachment2.pdf';
+            $project->attachement2 = $attachement_name;
+            $file2->move($destination_path, $attachement_name);
+        }
+        if($file3 != null){
+            $attachement_name = $project->project_name.$project->client_name.' attachment3.pdf';
+            $project->attachement3 = $attachement_name;
+            $file3->move($destination_path, $attachement_name);
+        }
+        if($file4 != null){
+            $attachement_name = $project->project_name.$project->client_name.' attachment4.pdf';
+            $project->attachement4 = $attachement_name;
+            $file4->move($destination_path, $attachement_name);
+        }
+        if($file5 != null){
+            $attachement_name = $project->project_name.$project->client_name.' attachment5.pdf';
+            $project->attachement5 = $attachement_name;
+            $file5->move($destination_path, $attachement_name);
         }
         $project->save();
         return redirect('/project/list');
@@ -57,12 +81,36 @@ class ProjectController extends Controller
         $project->fixed_price = $request->input('fixed_price');
         $project->phone = $request->input('phone');
         $project->description = $request->input('description');
-        $file = Input::file('attachement'); 
-        if($file != null){
-            $destination_path = 'uploads';
-            $attachement_name = $project->project_name.$project->client_name.'.pdf';
-            $project->attachement = $attachement_name;
-            $file->move($destination_path, $attachement_name);
+        $file1 = Input::file('attachement1'); 
+        $file2 = Input::file('attachement2'); 
+        $file3 = Input::file('attachement3'); 
+        $file4 = Input::file('attachement4'); 
+        $file5 = Input::file('attachement5'); 
+        $destination_path = 'uploads';
+        if($file1 != null){
+            $attachement_name = $project->project_name.$project->client_name.' attachment1.pdf';
+            $project->attachement1 = $attachement_name;
+            $file1->move($destination_path, $attachement_name);
+        }
+        if($file2 != null){
+            $attachement_name = $project->project_name.$project->client_name.' attachment2.pdf';
+            $project->attachement2 = $attachement_name;
+            $file2->move($destination_path, $attachement_name);
+        }
+        if($file3 != null){
+            $attachement_name = $project->project_name.$project->client_name.' attachment3.pdf';
+            $project->attachement3 = $attachement_name;
+            $file3->move($destination_path, $attachement_name);
+        }
+        if($file4 != null){
+            $attachement_name = $project->project_name.$project->client_name.' attachment4.pdf';
+            $project->attachement4 = $attachement_name;
+            $file4->move($destination_path, $attachement_name);
+        }
+        if($file5 != null){
+            $attachement_name = $project->project_name.$project->client_name.' attachment5.pdf';
+            $project->attachement5 = $attachement_name;
+            $file5->move($destination_path, $attachement_name);
         }
         $project->save();
         return redirect('/project/list');

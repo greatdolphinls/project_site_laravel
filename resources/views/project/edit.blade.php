@@ -82,11 +82,35 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label visible-ie8 visible-ie9">Attachement</label>
+                                            <label class="control-label visible-ie8 visible-ie9">Attachement 1</label>
                                             <div class="form-group">
-                                            <input type="file" name="attachement"/>
+                                            <input type="file" name="attachement1"/>
                                             </div>
                                         </div>
+                                        <div class="form-group">
+                                                <label class="control-label visible-ie8 visible-ie9">Attachement 2</label>
+                                                <div class="form-group">
+                                                <input type="file" name="attachement2"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label class="control-label visible-ie8 visible-ie9">Attachement 3</label>
+                                                    <div class="form-group">
+                                                    <input type="file" name="attachement3"/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                        <label class="control-label visible-ie8 visible-ie9">Attachement 4</label>
+                                                        <div class="form-group">
+                                                        <input type="file" name="attachement4"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                            <label class="control-label visible-ie8 visible-ie9">Attachement 5</label>
+                                                            <div class="form-group">
+                                                            <input type="file" name="attachement5"/>
+                                                            </div>
+                                                        </div>
                                     </div>
                                     <div class="col-xs-12 col-md-12 col-sm-12">
                                         <div class="form-actions">

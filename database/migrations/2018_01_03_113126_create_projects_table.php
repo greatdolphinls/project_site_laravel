@@ -21,7 +21,11 @@ class CreateProjectsTable extends Migration
             $table->float('fixed_price');
             $table->string('phone');
             $table->text('description');
-            $table->string('attachement')->nullable;
+            $table->string('attachement1')->nullable;
+            $table->string('attachement2')->nullable;
+            $table->string('attachement3')->nullable;
+            $table->string('attachement4')->nullable;
+            $table->string('attachement5')->nullable;
             $table->softDeletes();
             $table->timestamps();
         });
