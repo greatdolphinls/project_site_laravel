@@ -14,7 +14,11 @@ jQuery(document).ready(function () {
 
         function CreateProjectList() {
             var actionrenderer = function (row, datafield, value) {
-                return  '<div style="margin-left: 30px; margin-top: 13px;">' +
+                return  '<div style="margin-left: 10px; margin-top: 13px;">' +
+                        '   <a href="javascript:projectEdit('+value+')" class="btn btn-circle btn-icon-only">' +
+                        '       <i class="icon-pencil" class="btn btn-circle btn-icon-only btn-default">' +
+                        '       </i>' +
+                        '   </a>' +
                         '   <a href="javascript:projectDetail('+value+')" class="btn btn-circle btn-icon-only">' +
                         '       <i class="icon-eye" class="btn btn-circle btn-icon-only btn-default">' +
                         '       </i>' +
@@ -74,5 +78,8 @@ jQuery(document).ready(function () {
 
 function projectDetail(id){
     location.assign(BASE_URL + "/project/detail/"+id);
+}
+function projectEdit(id){
+    location.assign(BASE_URL + "/project/edit/"+id);
 }
 

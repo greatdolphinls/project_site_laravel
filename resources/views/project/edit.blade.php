@@ -32,12 +32,12 @@
                     <div class="portlet box blue" id="flashContainer">
                         <div class="portlet-title">
                             <div class="caption">
-                                Project Add
+                                Project Edit
                             </div>
                         </div>
                         <div class="portlet-body">
                             <div class="row">
-                                <form class="register-form" action="/project/createProject" method="POST" enctype='multipart/form-data'>
+                            <form class="register-form" action="/project/edit/{{ $project->id }}" method="POST" enctype='multipart/form-data'>
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
                                     <div class="col-xs-12 col-md-6 col-sm-6">
                                         <p>
@@ -46,37 +46,37 @@
                                         <div class="form-group">
                                             <label class="control-label visible-ie8 visible-ie9">Project Name</label>
                                             <div class="input-icon">
-                                                <input class="form-control placeholder-no-fix" type="text" placeholder="Project Name" name="project_name"/>
+                                            <input class="form-control placeholder-no-fix" type="text" placeholder="Project Name" name="project_name" value="{{ $project->project_name}}"/>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label visible-ie8 visible-ie9">Client Name</label>
                                             <div class="input-icon">
-                                                <input class="form-control placeholder-no-fix" type="text" placeholder="Client" name="client_name"/>
+                                                <input class="form-control placeholder-no-fix" type="text" placeholder="Client" name="client_name"  value="{{ $project->client_name}}" />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label visible-ie8 visible-ie9">Hour Rate</label>
                                             <div class="input-icon">
-                                                    <input class="form-control placeholder-no-fix" type="text" placeholder="Hour Rate" name="hour_rate"/>
+                                                    <input class="form-control placeholder-no-fix" type="text" placeholder="Hour Rate" name="hour_rate"  value="{{ $project->hour_rate}}" />
                                                 </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label visible-ie8 visible-ie9">Fixed Price</label>
                                             <div class="input-icon">
-                                                <input class="form-control placeholder-no-fix" type="text" placeholder="Fixed Price" name="fixed_price"/>
+                                                <input class="form-control placeholder-no-fix" type="text" placeholder="Fixed Price" name="fixed_price" value="{{ $project->fixed_price}}" />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label visible-ie8 visible-ie9">Phone</label>
                                             <div class="input-icon">
-                                                <input class="form-control placeholder-no-fix" type="text" placeholder="Phone" name="phone"/>
+                                                <input class="form-control placeholder-no-fix" type="text" placeholder="Phone" name="phone" value="{{ $project->phone}}" />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label visible-ie8 visible-ie9">Attachement</label>
                                             <div class="form-group">
-                                                    <input type="file" name="attachement"/>
+                                            <input type="file" name="attachement"/>
                                             </div>
                                         </div>
                                     </div>
@@ -85,7 +85,7 @@
                                             <a href="{{ url('/project/list')}}"  id="register-back-btn" type="button" class="btn">
                                                 <i class="m-icon-swapleft"></i> BACK </a>
                                             <button type="submit" id="register-submit-btn" class="btn green-haze pull-right">
-                                                ADD <i class="m-icon-swapright m-icon-white"></i>
+                                                Save <i class="m-icon-swapright m-icon-white"></i>
                                             </button>
                                         </div>
                                     </div>

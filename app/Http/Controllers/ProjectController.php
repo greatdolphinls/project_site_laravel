@@ -20,23 +20,51 @@ class ProjectController extends Controller
         ->with('project', $project);
     }
 
-    
-    public function createProject(Request $request)
+    public function projectEditShow($id)
     {
-        $destination_path = 'uploads';
-        $project = new Project;
-
+        $project = Project::find($id);
+        return view('project.edit')
+        ->with('project', $project);
+    }
+    
+    public function projectUpdate(Request $request, $id)
+    {
+        $project = Project::find($id);
         $project->project_name = $request->input('project_name');
         $project->client_name = $request->input('client_name');
         $project->hour_rate = $request->input('hour_rate');
         $project->project_type ='fixed';
         $project->fixed_price = $request->input('fixed_price');
         $project->phone = $request->input('phone');
-        $attachement_name = $project->project_name.$project->client_name.'.pdf';
-        $project->attachement = $attachement_name;
+        
+        $file = Input::file('attachement'); 
+        if($file != null){
+            $destination_path = 'uploads';
+            $attachement_name = $project->project_name.$project->client_name.'.pdf';
+            $project->attachement = $attachement_name;
+            $file->move($destination_path, $attachement_name);
+        }
         $project->save();
-		$file = Input::file('attachement'); 
-		$file->move($destination_path, $attachement_name);
+        return redirect('/project/list');
+    }
+    public function createProject(Request $request)
+    {
+        $project = new Project;
+        $project->project_name = $request->input('project_name');
+        $project->client_name = $request->input('client_name');
+        $project->hour_rate = $request->input('hour_rate');
+        $project->project_type ='fixed';
+        $project->fixed_price = $request->input('fixed_price');
+        $project->phone = $request->input('phone');
+        
+        $file = Input::file('attachement'); 
+        if($file != null){
+            $destination_path = 'uploads';
+            $attachement_name = $project->project_name.$project->client_name.'.pdf';
+            $project->attachement = $attachement_name;
+            $file->move($destination_path, $attachement_name);
+        }
+        $project->save();
         return redirect('/project/list');
     }
 
