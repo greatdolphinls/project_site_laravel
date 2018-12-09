@@ -16,6 +16,7 @@ $factory->define(App\Models\Project::class, function (Faker\Generator $faker) {
         'hour_rate' => random_int(10, 30),
         'project_type' => sprintf("%s", $faker->randomElement(['hourly', 'fixed'])),
         'fixed_price' => random_int(100, 3000),
+        'description' => $faker->text,
         'phone' => $faker->phoneNumber,
     ];
 });

@@ -82,6 +82,14 @@
                                         </div>
                                     </div>
                                     <div class="row static-info">
+                                        <div class="col-md-5 name">
+                                                description:
+                                        </div>
+                                        <div class="col-md-7 value">
+                                                {{ $project->description}}
+                                        </div>
+                                    </div>
+                                    <div class="row static-info">
                                             <div class="col-md-5 name">
                                                     Attachement:
                                             </div>

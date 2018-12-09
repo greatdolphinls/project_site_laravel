@@ -20,6 +20,7 @@ class CreateProjectsTable extends Migration
             $table->enum('project_type', ['hourly', 'fixed']);
             $table->float('fixed_price');
             $table->string('phone');
+            $table->text('description');
             $table->string('attachement')->nullable;
             $table->softDeletes();
             $table->timestamps();

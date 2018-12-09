@@ -74,6 +74,13 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label class="control-label visible-ie8 visible-ie9">Description</label>
+                                            <div class="input-icon">
+                                                <textarea class="form-control placeholder-no-fix"  placeholder="Description" name="description" rows="4" cols="50">
+                                                </textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
                                             <label class="control-label visible-ie8 visible-ie9">Attachement</label>
                                             <div class="form-group">
                                                     <input type="file" name="attachement"/>

@@ -36,7 +36,7 @@ class ProjectController extends Controller
         $project->project_type ='fixed';
         $project->fixed_price = $request->input('fixed_price');
         $project->phone = $request->input('phone');
-        
+        $project->description = $request->input('description');
         $file = Input::file('attachement'); 
         if($file != null){
             $destination_path = 'uploads';
@@ -56,7 +56,7 @@ class ProjectController extends Controller
         $project->project_type ='fixed';
         $project->fixed_price = $request->input('fixed_price');
         $project->phone = $request->input('phone');
-        
+        $project->description = $request->input('description');
         $file = Input::file('attachement'); 
         if($file != null){
             $destination_path = 'uploads';
